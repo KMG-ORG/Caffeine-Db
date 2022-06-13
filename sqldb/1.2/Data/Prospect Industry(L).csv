@@ -1,0 +1,31 @@
+Industry ID (PK),Classification ID (FK),"Industry Name (Data Type-String, Length-500)"
+1,1,Child Day Care
+2,1,Adult Day Care
+3,1,Geriatric Services
+4,1,Homes & Centers
+5,1,Housing & Shelter
+6,1,"Human Service Orgs (YMCA, Urban League, Red Cross, Salvation Army, etc.)"
+7,1,"Family & Youth Services & Development (incl Boys & Girls Clubs, Big Brother/Sister, Scouting)"
+8,1,"Developmental Disability, Handicap Services & Disabilities"
+9,1,Charitable Food Organizations
+10,1,Adoption & Foster Care
+11,1,Civil Rights & Advocacy Orgs
+12,1,Crime & Legal Related
+13,1,Employment & Training Services
+14,1,"Recreation, Sports & Camps"
+15,1,Human Services - Other
+16,2,"Specialty Hospitals, Clinics & Family Related"
+17,2,Home Health
+18,2,Nursing & Rehab
+19,2,Mental Health Services
+20,2,Substance Abuse & Addiction Services
+21,2,Health Care Services & Support
+22,2,Volunteer Services
+23,3,Professional Societies
+24,3,Colleges & Universities
+25,3,"Pre-School, Special Ed, Charter and Vocational Schools"
+26,3,"Educational Service and Support, including Libraries"
+27,4,Religious Organizations
+28,5,Community Action Organizations
+29,6,Foundations & Trusts
+30,7,"Museums, Arts & Humanities"

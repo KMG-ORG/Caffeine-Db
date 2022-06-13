@@ -1,0 +1,4 @@
+Column Name,Data Type,Length
+Prospect ID (FK),Integer,
+Tag ID (PK),Integer,
+Tag Description,String,100

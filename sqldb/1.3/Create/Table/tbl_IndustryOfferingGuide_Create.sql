@@ -1,0 +1,4 @@
+﻿CREATE TABLE IndustryOfferingGuide(
+[Id] INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+[OfferingGuideId] INT FOREIGN KEY REFERENCES OfferingGuide(Id) NULL,
+[IndustryId] INT FOREIGN KEY REFERENCES  ProspectIndustry(Id) NOT NULL)

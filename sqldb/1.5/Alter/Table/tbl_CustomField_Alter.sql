@@ -1,0 +1,1 @@
+﻿ALTER TABLE CustomField ADD ProspectId int FOREIGN KEY REFERENCES Prospects(Id);

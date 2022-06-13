@@ -1,0 +1,4 @@
+﻿CREATE TABLE OfferingGuide(
+[Id] INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+[OfferingGuideName] VARCHAR(100) NOT NULL
+)

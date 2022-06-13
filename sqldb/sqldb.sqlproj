@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>sqldb</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{60de51ec-cbcb-4296-b321-ee5e2f13d087}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SqlDb</RootNamespace>
+    <AssemblyName>SqlDb</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetDatabase>sqldb</TargetDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="1.1" />
+    <Folder Include="1.1\Create" />
+    <Folder Include="1.1\Create\Sp" />
+    <Folder Include="1.1\Create\Table" />
+    <Folder Include="1.1\Data" />
+    <Folder Include="1.2" />
+    <Folder Include="1.2\Alter" />
+    <Folder Include="1.2\Alter\Sp" />
+    <Folder Include="1.2\Alter\Table" />
+    <Folder Include="1.2\Create" />
+    <Folder Include="1.2\Create\Sp" />
+    <Folder Include="1.2\Create\Table" />
+    <Folder Include="1.2\Data" />
+    <Folder Include="1.6" />
+    <Folder Include="1.6\Alter" />
+    <Folder Include="1.6\Alter\Sp" />
+    <Folder Include="1.6\Alter\Table" />
+    <Folder Include="1.6\Create" />
+    <Folder Include="1.6\Create\Sp" />
+    <Folder Include="1.6\Create\Table" />
+    <Folder Include="1.6\Data" />
+    <Folder Include="1.3\" />
+    <Folder Include="1.3\Create\" />
+    <Folder Include="1.3\Create\Sp\" />
+    <Folder Include="1.4\" />
+    <Folder Include="1.4\Create\" />
+    <Folder Include="1.4\Create\Trigger\" />
+    <Folder Include="1.4\Create\Table\" />
+    <Folder Include="1.4\Create\Sp\" />
+    <Folder Include="1.3\Data\" />
+    <Folder Include="1.3\Create\Table\" />
+    <Folder Include="1.4\Data\" />
+    <Folder Include="1.5\" />
+    <Folder Include="1.5\Alter\" />
+    <Folder Include="1.5\Alter\Sp\" />
+    <Folder Include="1.7" />
+    <Folder Include="1.7\Alter" />
+    <Folder Include="1.7\Alter\Sp" />
+    <Folder Include="1.7\Create" />
+    <Folder Include="1.7\Create\Table" />
+    <Folder Include="1.7\Create\Sp" />
+    <Folder Include="1.7\Alter\Table" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1.3\Create\Sp\sp_Prospect_Search.sql" />
+    <None Include="1.4\Create\Trigger\tr_AuditLog_ProspectInformation.sql" />
+    <None Include="1.4\Create\Trigger\tr_AuditLog_Contacts.sql" />
+    <None Include="1.4\Create\Table\tbl_AuditLog_create.sql" />
+    <None Include="1.4\Create\Sp\sp_Recall_SelectById.sql" />
+    <None Include="1.4\Create\Sp\sp_Contact_Active.sql" />
+    <None Include="1.4\Create\Sp\sp_Recall_SelectById.sql" />
+    <None Include="1.2\Data\Contact.csv" />
+    <None Include="1.2\Data\Prospect Inactivation %28L).csv" />
+    <None Include="1.2\Data\Prospect Industry%28L).csv" />
+    <None Include="1.2\Data\Prospect Size%28L).csv" />
+    <None Include="1.2\Data\Prospect Status %28L).csv" />
+    <None Include="1.2\Data\Prospect.csv" />
+    <None Include="1.2\Data\ProspectInformation.csv" />
+    <None Include="1.2\Data\States.csv" />
+    <None Include="1.2\Data\Tags.csv" />
+    <None Include="1.6\Create\Sp\sp_TagMaintainence_PaginationWithSearch.sql" />
+    <None Include="1.6\Alter\Sp\sp_ManageList_Pagination.sql" />
+    <None Include="1.6\Data\tbl_TagMaintainence_Insert.sql" />
+    <None Include="1.6\Alter\Sp\sp_TagMaintainence_PaginationWithSearch.sql" />
+    <None Include="1.6\Alter\Table\tbl_CreateList_Alter.sql" />
+    <None Include="1.6\Create\Table\tbl_CheckDuplicateProspectsCsv.sql" />
+    <None Include="1.6\Create\Table\tbl_CheckDuplicateProspectsType.sql" />
+    <None Include="1.6\Create\Table\tbl_ImportProspectsInfo.sql" />
+    <None Include="1.6\Create\Table\tbl_RequiredFieldsForProspectCsvImport.sql" />
+    <None Include="1.6\Create\Table\tbl_ImportProspectFileData.sql" />
+    <None Include="1.6\Create\Sp\sp_ImportProspectFileData_Save.sql" />
+    <None Include="1.6\Create\Sp\sp_Check_DuplicateProspectFrom_CSV.sql" />
+    <None Include="1.6\Create\Sp\sp_ImportProspectFileData_Get.sql" />
+    <None Include="1.6\Create\Sp\sp_ImportProspectFileData_GetByFileId.sql" />
+    <None Include="1.6\Create\Sp\sp_GetRequiredFieldsForProspectCsvImport.sql" />
+    <None Include="1.6\Create\Sp\sp_ImportProspect_Save.sql" />
+    <None Include="1.6\Create\Sp\sp_Check_DuplicateProspectFrom_CaffieneAndLamb.sql" />
+    <None Include="1.6\Create\Sp\sp_Prospect_CheckDuplicate.sql" />
+    <None Include="1.7\Alter\Sp\sp_ProspectPreviewList_Select.sql" />
+    <None Include="1.7\Alter\Sp\sp_Prospect_SelectByFilter.sql" />
+    <None Include="1.6\Create\Sp\sp_Tag_Save.sql" />
+    <None Include="1.6\Create\Sp\sp_Tag_Update.sql" />
+    <None Include="1.6\Create\Sp\sp_Tag_SelectById.sql" />
+    <None Include="1.6\Create\Sp\sp_Tag_SelectByBusinessObject.sql" />
+    <None Include="1.6\Create\Sp\sp_Tag_PaginationWithSearch.sql" />
+    <None Include="1.6\Create\Sp\sp_Tag_Delete.sql" />
+    <None Include="1.6\Create\Sp\sp_BusinessObject_Select.sql" />
+    <None Include="1.6\Create\Sp\sp_Tag_Select_Source.sql" />
+    <None Include="1.6\Create\Table\tbl_Tag_Create.sql" />
+    <None Include="1.6\Create\Table\tbl_BusinessObject_Create.sql" />
+    <None Include="1.6\Data\tbl_Tag_Insert.sql" />
+    <None Include="1.6\Data\tbl_BusinessObject_Insert.sql" />
+    <None Include="1.7\Alter\Sp\sp_Recall_SelectWithPagination.sql" />
+    <None Include="1.7\Create\Table\tbl_UserCallSetting_Create.sql" />
+    <None Include="1.7\Create\Sp\sp_UserCallSetting_SelectByUser.sql" />
+    <None Include="1.7\Create\Sp\sp_UserCallSetting_Update.sql" />
+    <None Include="1.7\Alter\Sp\sp_Prospect_Update.sql" />
+    <None Include="1.7\Alter\Sp\sp_Prospect_Save.sql" />
+    <None Include="1.7\Alter\Sp\sp_ImportProspect_Save.sql" />
+    <None Include="1.7\Alter\Sp\sp_Prospect_CheckDuplicate.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1.3\Data\tbl_MasterDisposition_Insert.sql" />
+    <None Include="1.3\Create\Table\tbl_MasterDisposition_Create.sql" />
+    <None Include="1.4\Create\Table\tbl_Dials_Create.sql" />
+    <None Include="1.4\Create\Table\tbl_Priority_Create.sql" />
+    <None Include="1.4\Data\tbl_Priority_Insert.sql" />
+    <None Include="1.4\Create\Table\tbl_Reminder_Create.sql" />
+    <None Include="1.4\Create\Sp\sp_Recall_Select_ByProspectId.sql" />
+    <None Include="1.4\Create\Sp\sp_Tier_Select.sql" />
+    <None Include="1.4\Create\Table\tb_ProspectTier_Create.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1.4\Create\Sp\sp_Recall_Save.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1.5\Alter\Sp\sp_Prospect_SelectWithPagination.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="1.1\Create\Sp\sp_Contact_Save.sql" />
+    <Build Include="1.1\Create\Sp\sp_Contact_Select.sql" />
+    <Build Include="1.1\Create\Sp\sp_Contact_SelectByContactId.sql" />
+    <Build Include="1.1\Create\Sp\sp_Contact_SelectById.sql" />
+    <Build Include="1.1\Create\Sp\sp_Contact_SelectNew.sql" />
+    <Build Include="1.1\Create\Sp\sp_Contact_Update.sql" />
+    <Build Include="1.1\Create\Sp\sp_GetProspectReasonList.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Active_Update.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Delete.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Industry.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Reason.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Save.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Select.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_SelectById.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_SelectByIdAndIsPrimary.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_SelectByName.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Size.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_State.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Status.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Tag_Delete.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Tag_Save.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Tag_SelectByProspectId.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Tag_SelectByTagName.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Tag_Update.sql" />
+    <Build Include="1.1\Create\Sp\sp_Prospect_Update.sql" />
+    <Build Include="1.1\Create\Sp\sp_ProspectInactivationReason_Select.sql" />
+    <Build Include="1.1\Create\Sp\sp_ProspectInformation_Save.sql" />
+    <Build Include="1.1\Create\Sp\sp_ProspectInformation_Update.sql" />
+    <Build Include="1.1\Create\Sp\sp_ProspectTag_Delete.sql" />
+    <Build Include="1.1\Create\Sp\sp_ProspectTag_Save.sql" />
+    <Build Include="1.1\Create\Sp\sp_ProspectTag_SelectByTagName.sql" />
+    <Build Include="1.1\Create\Sp\Sp_ProspectTags_SelectByProspectId.sql" />
+    <Build Include="1.1\Create\Table\tbl_Contact_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_Prospect_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_ProspectInactiveReason_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_ProspectIndustry_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_ProspectInformation_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_ProspectSize_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_ProspectStatus_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_State_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_Tag_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_TodoItems_Create.sql" />
+    <Build Include="1.1\Create\Table\tbl_TodoLists.sql" />
+    <Build Include="1.1\Data\tbl_ProspectInactiveReason_Insert.sql" />
+    <Build Include="1.1\Data\tbl_ProspectIndustry_Insert.sql" />
+    <Build Include="1.1\Data\tbl_ProspectSize_Insert.sql" />
+    <Build Include="1.1\Data\tbl_ProspectStatus_Insert.sql" />
+    <Build Include="1.1\Data\tbl_State_Insert.sql" />
+    <Build Include="1.2\Alter\Sp\sp_BusinessLine_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_BusinessStatus_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Contact_Save.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Contact_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Contact_SelectByContactId.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Contact_SelectByProspectId.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Contact_Update.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Industry_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_Active_Update.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_Save.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_SelectById.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_SelectByName.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_Status_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_Tag_Delete.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_Tag_Save.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_Tag_SelectByProspectId.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Prospect_Update.sql" />
+    <Build Include="1.2\Alter\Sp\sp_ProspectInformation_Save.sql" />
+    <Build Include="1.2\Alter\Sp\sp_ProspectInformation_Update.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Reason_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Size_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_State_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Users_Select.sql" />
+    <Build Include="1.2\Alter\Sp\sp_Users_SelectByRole.sql" />
+    <Build Include="1.2\Alter\Table\ProspectInformation.sql" />
+    <Build Include="1.2\Create\Sp\sp_BusinessLine_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_BusinessStatus_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_Contact_Delete.sql" />
+    <Build Include="1.2\Create\Sp\sp_Contact_Select_PrimaryContact.sql" />
+    <Build Include="1.2\Create\Sp\sp_Industry_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_Prospect_Status_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_Prospect_Tag_Update.sql" />
+    <Build Include="1.2\Create\Sp\sp_Reason_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_Size_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_State_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_User_save.sql" />
+    <Build Include="1.2\Create\Sp\sp_UserRole_Save.sql" />
+    <Build Include="1.2\Create\Sp\sp_Users_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_Users_SelectByRole.sql" />
+    <Build Include="1.2\Create\Sp\sp_WBA_Delete.sql" />
+    <Build Include="1.2\Create\Sp\sp_WBA_Save.sql" />
+    <Build Include="1.2\Create\Sp\sp_WBA_Select.sql" />
+    <Build Include="1.2\Create\Sp\sp_WBA_SelectByWBAId.sql" />
+    <Build Include="1.2\Create\Sp\sp_WBA_Update.sql" />
+    <Build Include="1.2\Create\Table\tbl_BusinessLine_Create.sql" />
+    <Build Include="1.2\Create\Table\tbl_BusinessStatus_Create.sql" />
+    <Build Include="1.2\Create\Table\tbl_UserRole_Create.sql" />
+    <Build Include="1.2\Create\Table\tbl_Users_Create.sql" />
+    <Build Include="1.2\Create\Table\tbl_WBA_Create.sql" />
+    <Build Include="1.2\Data\tbl_BusinessLine_Insert.sql" />
+    <Build Include="1.2\Data\tbl_BusinessStatus_Insert.sql" />
+    <Build Include="1.2\Data\tbl_ProspectIndustry_Insert.sql" />
+    <Build Include="1.2\Data\tbl_ProspectSize_Insert.sql" />
+    <Build Include="1.2\Data\tbl_ProspectStatus_Insert.sql" />
+    <Build Include="1.2\Data\tbl_Reason_Insert.sql" />
+    <Build Include="1.2\Data\tbl_States_Insert.sql" />
+    <Build Include="1.2\Data\tbl_UserRole_Insert.sql" />
+    <Build Include="1.2\Data\tbl_Users_Insert.sql" />
+    <Build Include="1.6\Alter\Sp\sp_AllCreateList_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Contact_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Contact_SelectWithPagination.sql" />
+    <Build Include="1.6\Alter\Sp\sp_CreatedList_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_CreateList_IsExits.sql" />
+    <Build Include="1.6\Alter\Sp\sp_CreateList_Save.sql" />
+    <Build Include="1.6\Alter\Sp\sp_CreateList_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Disposition_Save.sql" />
+    <Build Include="1.6\Alter\Sp\sp_ExpiringCarrier_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_ExpiringCarrier_SelectByName.sql" />
+    <Build Include="1.6\Alter\Sp\sp_ExpiringCarrier_SelectWithPagination.sql" />
+    <Build Include="1.6\Alter\Sp\sp_LeadGenerator_Save.sql" />
+    <Build Include="1.6\Alter\Sp\sp_LeadGenerator_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_LeadGenerator_SelectById.sql" />
+    <Build Include="1.6\Alter\Sp\sp_LeadGenerator_SelectByName.sql" />
+    <Build Include="1.6\Alter\Sp\sp_LeadGenerator_SelectWithPagination.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Prospect_Active_Update.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Prospect_Save.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Prospect_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Prospect_SelectByFilter.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Prospect_SelectById.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Prospect_SelectByName.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Prospect_SelectWithPagination.sql" />
+    <Build Include="1.6\Alter\Sp\sp_ProspectPreviewList_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_ProspectSearchByCreatedListId_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Quote_SelectById.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Recall_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Users_SelectByName.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Users_SelectByRole.sql" />
+    <Build Include="1.6\Alter\Sp\sp_Users_SelectByRoleWithPagination.sql" />
+    <Build Include="1.6\Alter\Sp\sp_WBA_Select.sql" />
+    <Build Include="1.6\Alter\Sp\sp_WBA_SelectWithPagination.sql" />
+    <Build Include="1.6\Alter\Table\tbl_LeadGenerator_Alter.sql" />
+    <Build Include="1.6\Alter\Table\tbl_Users_Alter.sql" />
+    <Build Include="1.6\Create\Sp\sp_Contact_SelectByName.sql" />
+    <Build Include="1.6\Create\Sp\sp_ManageList_Pagination.sql" />
+    <Build Include="1.6\Create\Sp\sp_ParentTag_Select.sql" />
+    <Build Include="1.6\Create\Sp\sp_Prospect_LookupList.sql" />
+    <Build Include="1.6\Create\Sp\sp_Prospect_LookUpWithPagination.sql" />
+    <Build Include="1.6\Create\Sp\sp_Prospect_Tag_SelectFromMaintainence.sql" />
+    <Build Include="1.6\Create\Sp\sp_ProspectList_SelectById.sql" />
+    <Build Include="1.6\Create\Sp\sp_ProspectPreviewList_NoOFCountSelect.sql" />
+    <Build Include="1.6\Create\Sp\sp_Recall_Select.sql" />
+    <Build Include="1.6\Create\Sp\sp_Recall_SelectWithPagination.sql" />
+    <Build Include="1.6\Create\Sp\sp_TagEntity_Select.sql" />
+    <Build Include="1.6\Create\Sp\sp_TagMaintainence_Delete.sql" />
+    <Build Include="1.6\Create\Sp\sp_TagMaintainence_Save.sql" />
+    <Build Include="1.6\Create\Sp\sp_TagMaintainence_SelectByEntity.sql" />
+    <Build Include="1.6\Create\Sp\sp_TagMaintainence_SelectById.sql" />
+    <Build Include="1.6\Create\Sp\sp_TagMaintainence_Update.sql" />
+    <Build Include="1.6\Create\Table\tbl_ParentTag_Create.sql" />
+    <Build Include="1.6\Create\Table\tbl_TagEntity_Create.sql" />
+    <Build Include="1.6\Create\Table\tbl_TagMaintainence_Create.sql" />
+    <Build Include="1.6\Data\tbl_LeadGenerator_Insert.sql" />
+    <Build Include="1.6\Data\tbl_ParentTag_Insert.sql" />
+    <Build Include="1.6\Data\tbl_TagEntity_Insert.sql" />
+    <Build Include="1.6\Data\tbl_Users_Insert.sql" />
+    <Build Include="1.6\Create\Sp\sp_Activity_Select.sql" />
+    <None Include="1.7\Create\Sp\sp_UserCallSetting_Save.sql" />
+    <None Include="1.7\Alter\Sp\sp_Activity_Select.sql" />
+    <None Include="1.7\Alter\Sp\sp_Prospect_SelectWithPagination.sql" />
+    <None Include="1.7\Alter\Sp\sp_Prospect_Search.sql" />
+    <None Include="1.7\Alter\Sp\sp_ProspectSearchByCreatedListId_Select.sql" />
+    <None Include="1.7\Alter\Table\tbl_Prospect_Alter.sql" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿CREATE TABLE [dbo].[Recall](
+	[Id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	[ContactId] [int] NULL,
+	[ScheduledWithContact] [varchar](100) NULL,
+	[ProspectId] [int] NULL,
+	[ScheduledForProspect] [varchar](100) NULL,
+	[RecallDate] [datetime] NULL,
+	[RecallTime] [time](7) NULL,
+	[ToDate] [datetime] NULL,
+	[PriorityId] [int] NULL,
+	[ReminderId] [int] NULL,
+	[PhoneNumber] [bigint] NULL,
+	[ScheduledForProducer] [varchar](100) NULL,
+	[RecallStatusId] [int] NULL,
+	[CreatedDateTime] [datetime] NOT NULL,
+	[CreatedBy] [varchar](100) NOT NULL,
+	[ModifiedDateTime] [datetime] NOT NULL,
+	[ModifiedBy] [varchar](100) NOT NULL,
+	[IsDeleted] [bit] NOT NULL)
+

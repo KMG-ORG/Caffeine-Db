@@ -1,0 +1,59 @@
+Column Name,Data Type,Length
+Contact ID (PK),Integer,10
+Prospect ID (FK),Integer,10
+IsPrimary?,Boolean,NA
+AddressSameasProspect?,Boolean,NA
+First Name,String,100
+Middle Name,String,100
+Last Name,String,100
+Job Title,String,100
+NPS Nominated?,Boolean,NA
+Home1_Address_Title,String,100
+Home1_Address Line 1,String,100
+Home1_Address Line 2,String,100
+Home1_Territory,Integer,100
+Home1_City,String,100
+Home1_State,String,100
+Home1_Zip Code,String,100
+Home1_Phone Number,Integer,100
+Home1_Email,Email,100
+Home1_Extension,String,100
+Home1_Fax,Integer,100
+Home2_Address_Title,String,100
+Home2_Address Line 1,String,100
+Home2_Address Line 2,String,100
+Home2_Territory,Integer,100
+Home2_City,String,100
+Home2_State,String,100
+Home2_Zip Code,String,100
+Home2_Phone Number,Integer,100
+Home2_Email,Email,100
+Home2_Extension,String,100
+Home2_Fax,Integer,100
+Office1_Address_Title,String,100
+Office1_Address Line 1,String,100
+Office1_Address Line 2,String,100
+Office1_Territory,Integer,100
+Office1_City,String,100
+Office1_State,String,100
+Office1_Zip Code,String,100
+Office1_Phone Number,Integer,100
+Office1_Email,Email,100
+Office1_Extension,String,100
+Office1_Fax,Integer,100
+Office2_Address_Title,String,100
+Office2_Address Line 1,String,100
+Office2_Address Line 2,String,100
+Office2_Territory,Integer,100
+Office2_City,String,100
+Office2_State,String,100
+Office2_Zip Code,String,100
+Office2_Phone Number,Integer,100
+Office2_Email,Email,100
+Office2_Extension,String,100
+Office2_Fax,Integer,100
+CreatedDateTime,Date,NA
+ModifiedDateTime ,Date,NA
+CreatedBy ,String,100
+ModifiedBy ,String,100
+IsDeleted,Boolean,NA

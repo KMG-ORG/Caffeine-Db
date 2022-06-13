@@ -1,0 +1,11 @@
+Column Name,Data Type,Length
+Prospect ID (PK),Integer,10
+Prospect Name,String,100
+Address Line 1,String,100
+Address Line 2,String,100
+City,String,100
+State,String,100
+Zip Code,String,10
+Address Type,String(P/M),60
+Territory,Integer,10
+IsActive,Boolean,NA

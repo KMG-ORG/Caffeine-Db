@@ -1,0 +1,27 @@
+Column Name,Data Type,Length
+Prospect ID (FK),Integer,10
+EIN,Integer,9
+Years in Business ,Integer,16
+# of Employees ,Integer,16
+Revenue,Integer,16
+Non-Profit,Boolean,NA
+Prospect Status ID (FK),Integer,60
+Prospect  Inactivation Reason ID (FK),Integer,60
+Classification ID (FK),Integer,60
+Industry ID (FK),Integer,60
+Size ID (FK),Integer,60
+Insurance Information Added,Integer,60
+Risk Info,Boolean,NA
+EXP MOD,Decimal,NA
+Package Expiration Date,Date,NA
+Package Carrier,String,60
+Package Premium,Integer,16
+Worker’s Compensation Expiration Date,Date,NA
+Worker’s Compensation Carrier,String,60
+Worker’s Compensation Premium,Integer,16
+Tags,String,100
+CreatedDateTime,DateTime,NA
+ModifiedDateTime,DateTime,NA
+CreatedBy ,String,100
+ModifiedBy,String,100
+IsDeleted,Boolean,NA

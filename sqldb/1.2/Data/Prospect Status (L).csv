@@ -1,0 +1,13 @@
+Prospect  Status ID (PK),"Prospect Status (Data Type-String, Length-300)"
+1,"Do not call, not viable"
+2,Unknown
+3,"Qualified, ok to pursue"
+4,Got Appointment
+5,Requested Call Back
+6,Sending Policy Information
+7,Prospect – Quoted and Lost
+8,Do Not Email  or Contact
+9,Client
+10,Lost Client
+11,Invalid Prospect
+12,Incorrect Classification
